@@ -1,5 +1,6 @@
 <form action="action_page.php">
         <div class="container">
+	    <h1>Welcome to theMoCafe</h1>
             <h1>Register for Our Coffee Club</h1>
             <p>Join our community and enjoy exclusive offers!</p>
             <hr>

@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Mohan's Coffee Shop</title>
+    <title>Welcome to theMoscafe</title>
     <style>
         body {
             background-color: #f8e0b0;

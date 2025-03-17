@@ -1,28 +1,66 @@
-<form action="action_page.php">
-  <div class="container">
-    <h1>New user Register for DevOps Learning by V KISHOR KUMAR</h1>
-    <p>Please fill in this form to create an account for Devops.</p>
-    <hr>
-     
-    <label for="Name"><b>Enter YOUR Name</b></label>
-    <input type="text" placeholder="Enter Full Name" name="Name" id="Name" required>
-    <label for="mobile"><b>Enter YOUR mobile</b></label>
-    <input type="text" placeholder="Enter moible number" name="mobile" id="mobile" required>
-    <label for="email"><b>Enter YOUR Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <hr>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
+<%@ page import="java.io.*, javax.xml.parsers.*, org.w3c.dom.*" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to theMoscafe</title>
+    <style>
+        body {
+            background-color: #f8e0b0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            color: #8b4513;
+        }
+        .menu {
+            background: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px gray;
+            display: inline-block;
+            margin-top: 20px;
+        }
+        .menu-item {
+            padding: 10px;
+            font-size: 18px;
+            color: #5a3e1b;
+        }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Mohan's Coffee Shop ☕</h1>
+    <h2>Our Menu</h2>
+    
+    <div class="menu">
+        <%
+            try {
+                File xmlFile = new File(application.getRealPath("/WEB-INF/menu.xml"));
+                DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+                DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
+                Document doc = dBuilder.parse(xmlFile);
+                doc.getDocumentElement().normalize();
 
-   <h1> Thankyou, Happy Learning </h1>
+                NodeList nList = doc.getElementsByTagName("item");
 
-  
-</form>
+                for (int temp = 0; temp < nList.getLength(); temp++) {
+                    Node nNode = nList.item(temp);
+                    if (nNode.getNodeType() == Node.ELEMENT_NODE) {
+                        Element eElement = (Element) nNode;
+                        String name = eElement.getElementsByTagName("name").item(0).getTextContent();
+                        String price = eElement.getElementsByTagName("price").item(0).getTextContent();
+        %>
+                        <div class="menu-item">
+                            <strong><%= name %></strong> - ₹<%= price %>
+                        </div>
+        <%
+                    }
+                }
+            } catch (Exception e) {
+                out.println("<p>Error loading menu.</p>");
+            }
+        %>
+    </div>
+
+    <h3>Enjoy your Coffee! ☕</h3>
+</body>
+</html>

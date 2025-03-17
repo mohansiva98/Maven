@@ -1,27 +1,25 @@
 <form action="action_page.php">
-  <div class="container">
-    <h1>New user Regis</h1>
-    <p>Please fill in this form to create an account for Devops.</p>
-    <hr>
-    <label for="Name"><b>Enter YOUR Name</b></label>
-    <input type="text" placeholder="Enter Full Name" name="Name" id="Name" required>
-    <label for="mobile"><b>Enter YOUR mobile</b></label>
-    <input type="text" placeholder="Enter moible number" name="mobile" id="mobile" required>
-    <label for="email"><b>Enter YOUR Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" id="email" required>
-    <label for="psw"><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw" id="psw" required>
-    <label for="psw-repeat"><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
-    <hr>
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-    <button type="submit" class="registerbtn">Register</button>
-  </div>
-  <div class="container signin">
-    <p>Already have an account? <a href="#">Sign in</a>.</p>
-  </div>
-
-   <h1> Thankyou, Happy Learning </h1>
-
-  
-</form>
+        <div class="container">
+            <h1>Register for Our Coffee Club</h1>
+            <p>Join our community and enjoy exclusive offers!</p>
+            <hr>
+            <label for="Name"><b>Full Name</b></label>
+            <input type="text" placeholder="Enter Full Name" name="Name" required>
+            
+            <label for="mobile"><b>Mobile Number</b></label>
+            <input type="text" placeholder="Enter Mobile Number" name="mobile" required>
+            
+            <label for="email"><b>Email</b></label>
+            <input type="text" placeholder="Enter Email" name="email" required>
+            
+            <label for="psw"><b>Password</b></label>
+            <input type="password" placeholder="Enter Password" name="psw" required>
+            
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" placeholder="Repeat Password" name="psw-repeat" required>
+            
+            <hr>
+            <p>By signing up, you agree to our <a href="#">Terms & Privacy</a>.</p>
+            <button type="submit" class="registerbtn">Register</button>
+        </div>
+    </form>

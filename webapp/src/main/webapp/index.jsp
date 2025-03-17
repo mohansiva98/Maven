@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Welcome to theMoscafe</title>
+    <title>Hii all</title>
     <style>
         body {
             background-color: #f8e0b0;
@@ -28,7 +28,7 @@
     </style>
 </head>
 <body>
-    <h1>Welcome to Mohan's Coffee Shop ☕</h1>
+    <h1>Welcome to theMoscafe, Enjoy your drink</h1>
     <h2>Our Menu</h2>
     
     <div class="menu">
@@ -61,6 +61,6 @@
         %>
     </div>
 
-    <h3>Enjoy your Coffee! ☕</h3>
+    <h3>Enjoy your Coffee! :)</h3>
 </body>
 </html>
